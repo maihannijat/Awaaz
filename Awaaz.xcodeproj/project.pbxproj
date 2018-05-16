@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3307E8B20AB525000320406 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3307E8A20AB525000320406 /* FriendCell.swift */; };
 		F33138DA20A7D5A3007AE2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33138D920A7D5A3007AE2EB /* AppDelegate.swift */; };
 		F33138DC20A7D5A3007AE2EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33138DB20A7D5A3007AE2EB /* LoginViewController.swift */; };
 		F33138DF20A7D5A3007AE2EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F33138DD20A7D5A3007AE2EB /* Main.storyboard */; };
@@ -15,9 +16,12 @@
 		F33138EF20A7DF7E007AE2EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33138EE20A7DF7E007AE2EB /* Constants.swift */; };
 		F33138F120A8935D007AE2EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33138F020A8935D007AE2EB /* User.swift */; };
 		F33138F320A8CFFA007AE2EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33138F220A8CFFA007AE2EB /* HomeViewController.swift */; };
+		F3A1A7DC20A9D99E0093ABDA /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A7DB20A9D99E0093ABDA /* FriendsViewController.swift */; };
+		F3A1A7DE20A9EDF20093ABDA /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A1A7DD20A9EDF20093ABDA /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F3307E8A20AB525000320406 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		F33138D620A7D5A3007AE2EB /* Awaaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Awaaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33138D920A7D5A3007AE2EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F33138DB20A7D5A3007AE2EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		F33138EE20A7DF7E007AE2EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F33138F020A8935D007AE2EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F33138F220A8CFFA007AE2EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F3A1A7DB20A9D99E0093ABDA /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		F3A1A7DD20A9EDF20093ABDA /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				F33138F020A8935D007AE2EB /* User.swift */,
+				F3A1A7DD20A9EDF20093ABDA /* Friend.swift */,
+				F3307E8A20AB525000320406 /* FriendCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -85,6 +93,7 @@
 			children = (
 				F33138DB20A7D5A3007AE2EB /* LoginViewController.swift */,
 				F33138F220A8CFFA007AE2EB /* HomeViewController.swift */,
+				F3A1A7DB20A9D99E0093ABDA /* FriendsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -169,9 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F33138F320A8CFFA007AE2EB /* HomeViewController.swift in Sources */,
+				F3A1A7DE20A9EDF20093ABDA /* Friend.swift in Sources */,
 				F33138F120A8935D007AE2EB /* User.swift in Sources */,
+				F3307E8B20AB525000320406 /* FriendCell.swift in Sources */,
 				F33138DC20A7D5A3007AE2EB /* LoginViewController.swift in Sources */,
 				F33138DA20A7D5A3007AE2EB /* AppDelegate.swift in Sources */,
+				F3A1A7DC20A9D99E0093ABDA /* FriendsViewController.swift in Sources */,
 				F33138EF20A7DF7E007AE2EB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

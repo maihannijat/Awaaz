@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,23 +58,97 @@
         <!--Item 2-->
         <scene sceneID="D5g-34-qsB">
             <objects>
-                <viewController id="A8Y-NZ-3bZ" sceneMemberID="viewController">
+                <viewController id="A8Y-NZ-3bZ" customClass="FriendsViewController" customModule="Awaaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUd-HC-JzE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kKc-Jp-AcS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search by name or email" showsCancelButton="YES" id="QQn-B7-xtA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <scopeButtonTitles>
+                                        <string>Title</string>
+                                        <string>Title</string>
+                                    </scopeButtonTitles>
+                                    <connections>
+                                        <outlet property="delegate" destination="A8Y-NZ-3bZ" id="OE4-GA-DcM"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0AQ-xt-Bnm" customClass="FriendCell" customModule="Awaaz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="84" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0AQ-xt-Bnm" id="aMH-6x-Mzl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-Yx-6yi" userLabel="action">
+                                                    <rect key="frame" x="270" y="16" width="85" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="zKT-Ai-vNy"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Add Friend"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4U-xz-BGK" userLabel="name">
+                                                    <rect key="frame" x="20" y="16" width="230" height="12"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="zRJ-TZ-cY1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vrn-Yx-6yi" firstAttribute="top" secondItem="aMH-6x-Mzl" secondAttribute="topMargin" constant="5" id="CxI-KO-M3S"/>
+                                                <constraint firstItem="x4U-xz-BGK" firstAttribute="leading" secondItem="aMH-6x-Mzl" secondAttribute="leadingMargin" constant="5" id="LCr-UB-Ixf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Vrn-Yx-6yi" secondAttribute="bottom" constant="5" id="bCB-i7-QTa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x4U-xz-BGK" secondAttribute="bottom" constant="5" id="dIg-kf-UFf"/>
+                                                <constraint firstItem="Vrn-Yx-6yi" firstAttribute="leading" secondItem="x4U-xz-BGK" secondAttribute="trailing" constant="20" id="fvD-5O-4XT"/>
+                                                <constraint firstItem="x4U-xz-BGK" firstAttribute="top" secondItem="aMH-6x-Mzl" secondAttribute="topMargin" constant="5" id="mH9-Uh-zpm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Vrn-Yx-6yi" secondAttribute="trailing" constant="5" id="noM-3b-01c"/>
+                                                <constraint firstItem="Vrn-Yx-6yi" firstAttribute="leading" secondItem="x4U-xz-BGK" secondAttribute="trailing" constant="20" id="vMx-6C-lHH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="action" destination="Vrn-Yx-6yi" id="rc3-VU-CkX"/>
+                                            <outlet property="fullName" destination="x4U-xz-BGK" id="WWY-go-4wA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="A8Y-NZ-3bZ" id="XxH-UX-SiS"/>
+                                    <outlet property="delegate" destination="A8Y-NZ-3bZ" id="5O9-wz-jKR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZMJ-8L-FgQ" firstAttribute="trailing" secondItem="kKc-Jp-AcS" secondAttribute="trailing" id="Dco-vg-RR7"/>
+                            <constraint firstItem="kKc-Jp-AcS" firstAttribute="top" secondItem="ZMJ-8L-FgQ" secondAttribute="top" id="LwU-sy-yBU"/>
+                            <constraint firstItem="kKc-Jp-AcS" firstAttribute="leading" secondItem="ZMJ-8L-FgQ" secondAttribute="leading" id="b3X-fQ-iy0"/>
+                            <constraint firstItem="ZMJ-8L-FgQ" firstAttribute="bottom" secondItem="kKc-Jp-AcS" secondAttribute="bottom" id="bwq-RE-Qnf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZMJ-8L-FgQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="HYw-iS-Vsy"/>
+                    <connections>
+                        <outlet property="searchBar" destination="QQn-B7-xtA" id="18O-cP-SJz"/>
+                        <outlet property="tableView" destination="kKc-Jp-AcS" id="hNS-QC-Hae"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoB-C5-TgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="505"/>
+            <point key="canvasLocation" x="1760.8" y="504.19790104947532"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="kfv-eP-yP2">
             <objects>
-                <viewController id="qa4-0H-NiH" sceneMemberID="viewController">
+                <viewController id="qa4-0H-NiH" customClass="HomeViewController" customModule="Awaaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="57v-uG-twp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
