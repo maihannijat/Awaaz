@@ -10,4 +10,5 @@ struct Constants {
     static let HOST = "http://127.0.0.1:8000/api/"
     static let HOST_LOGIN = "\(Constants.HOST)login/"
     static let HOST_FRIEND = "\(Constants.HOST)friends/"
+    static let HOST_REGISTER = "\(Constants.HOST)register/"
 }

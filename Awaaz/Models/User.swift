@@ -12,10 +12,11 @@ class User: Decodable {
     var id: Int?
     var f_name: String?
     var l_name: String?
-    var email: String?
     var gender: String?
     var role: String?
     var image: String?
+    var email: String?
+    var password: String?
     var token: String?
     var status: String?
     
